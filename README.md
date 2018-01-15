@@ -10,7 +10,7 @@ BUILD and WORKSPACE files), one need only:
 1. [Install bazel](https://docs.bazel.build/versions/master/install.html)
 2. `git clone git@github.com:zhengyi13/bazel-go-hello`
 3. `cd bazel-go-hello`
-4. `blaze run :project`
+4. `blaze run :bazel-go-hello`
 
 ... and the result should be that bazel automatically downloads and installs
 (locally, hermetically) an appropriate copy of go (currently 1.9.2), and then
