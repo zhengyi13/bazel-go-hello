@@ -9,13 +9,13 @@ gazelle(
 go_library(
     name = "go_default_library",
     srcs = ["hello.go"],
-    importpath = "github.com/example/project",
+    importpath = "github.com/zhengyi13/bazel-go-hello",
     visibility = ["//visibility:private"],
 )
 
 go_binary(
-    name = "project",
+    name = "bazel-go-hello",
     embed = [":go_default_library"],
-    importpath = "github.com/example/project",
+    importpath = "github.com/zhengyi13/bazel-go-hello",
     visibility = ["//visibility:public"],
 )
