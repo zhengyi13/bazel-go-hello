@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/golang/glog"
+	"flag"
+)
 
 func main() {
-	fmt.Printf("Hello, World!\n")
+	var name = flag.String("name", "world", "to whom do you wish to say hello?")
+	flag.Parse()
+	fmt.Printf("Hello %s!\n", *name)
+	glog.Info("Prepage to repel boarders")
 }
