@@ -21,3 +21,23 @@ By extension, this should be possible for arbitrarily complex projects.
 
 Gazelle support is also included, so that as project complexity grows, BUILD
 files can be easily kept up to date.
+
+## Updating WORKSPACE
+
+As a project grows, you may add new (external) modules/dependencies. Typically, you'll probably do something like
+
+```shell
+go run hello.go
+```
+
+... and if you've added a hot new module to your imports, you'll find it's automatically added to your go.mod before being built and run.
+
+... and then you'll discover that `bazel run :hello` is now failing, and complaining about something like your new module not being there.
+
+When this happens, you can:
+
+```shell
+bazel run //:gazelle -- update_repos github.com/user/project
+```
+
+... and a new repository will be added to your WORKSPACE.
