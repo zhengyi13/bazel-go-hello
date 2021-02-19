@@ -15,5 +15,5 @@ go_library(
     srcs = ["hello.go"],
     importpath = "github.com/zhengyi13/bazel-go-hello",
     visibility = ["//visibility:private"],
-    deps = ["@com_github_golang_glog//:go_default_library"],
+    deps = ["@com_github_golang_glog//:glog"],
 )
