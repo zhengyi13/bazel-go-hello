@@ -13,7 +13,7 @@ BUILD and WORKSPACE files), one need only:
 4. `blaze run :hello`
 
 ... and the result should be that bazel automatically downloads and installs
-(locally, hermetically) an appropriate copy of go (currently 1.16), and then
+(locally, hermetically) an appropriate copy of go (currently 1.19.3), and then
 builds the project in its entirety using that copy of go, in an entirely
 reproducible way.
 
